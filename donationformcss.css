@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(lightingbook.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    font-family: Calibri;
+    text-align: center;
+}
+.form {
+    width: 400px;
+    height: 500px;
+    background-color: transparent;
+    color: black;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 40%;
+    text-align: left;
+    padding: 70px 30px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.cen
+{
+	width:400px;
+	height:850px;
+	color:white;
+	background:rgb(0,0,0,0.4);
+	position: absolute;
+	transform: translate(-50%,-50%);
+	left:45%;
+	top:50%;
+	text-align: left;
+	padding:70px 30px;
+	box-sizing: border-box;
+	font-size: 20px;
+	border-radius:50px;
+
+}
+
+
+.cen button[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 110px;
+    background-color: crimson;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.4s ease;
+
+}
+.cen button[type="submit"]:hover {
+    cursor: pointer;
+    border-style: solid;
+    border-color: crimson;
+    background-color:transparent;
+    color:crimson;
+}
+
+.cen button[type="reset"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 110px;
+    background-color:crimson;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.4s ease;
+
+}
+
+.cen button[type="reset"]:hover {
+    cursor: pointer;
+    border-style: solid;
+    border-color: crimson;
+    background-color:transparent;
+    color:crimson;
+}
+.error{
+    padding-left: 35px;
+    color: red;
+}
+                    

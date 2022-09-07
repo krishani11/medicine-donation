@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Donation Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initialscale=1.0">
+</head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="donationformcss.css">
+</head>
+<body ng-app="">
+<div class="cen">
+    <form name="myForm" novalidate="">
+        <h1>Donation Form </h1>
+        <label>Full Name</label>
+        <input type="text" name="name" ng-model="name" pattern="[a-zA-Z]{1,}+$" required=""><br>
+        <span ng-show="myForm.$submitted || myForm.name.$dirty">
+            <span class="error" ng-show="myForm.name.$error.required"><i class="fa fa-exclamation-circle"></i> Name Required</span>
+            <span class="error" ng-show="myForm.name.$error.pattern"><i class="fa fa-exclamation-circle"></i> Name cannot be Number</span>
+        </span><br>
+
+        <label>Gender</label>
+        <input type="radio" name="gender" ng-model="gender" ng-value="&quot;Male&quot;" required="">
+        <label>Male</label>
+        <input type="radio" name="gender" ng-model="gender" ng-value="&quot;Female&quot;" required="">
+        <label>Female</label>
+        <span ng-show="myForm.$submitted || myForm.gender.$dirty"><br>
+            <span class="error" ng-show="myForm.gender.$error.required"><i class="fa fa-exclamation-circle"></i> Gender Required</span>
+        </span><br><br>
+
+        <label>Date of Birth</label>
+        <input type="date" name="date" ng-model="date" required=""><br>
+        <span ng-show="myForm.$submitted || myForm.date.$dirty">
+            <span class="error" ng-show="myForm.date.$error.required"><i class="fa fa-exclamation-circle"></i> Date of Birth Required</span>
+        </span><br>
+
+        <label>Address</label>
+        <br>
+        <textarea name="address" ng-model="address" required=""></textarea><br>
+        <span ng-show="myForm.$submitted || myForm.address.$dirty">
+            <span class="error" ng-show="myForm.address.$error.required"><i class="fa fa-exclamation-circle"></i> Address Required</span>
+        </span><br>
+
+        <label>Email Id</label>
+        <input type="text" name="email" ng-model="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required=""><br>
+        <span ng-show="myForm.$submitted || myForm.email.$dirty">
+            <span class="error" ng-show="myForm.email.$error.required"><i class="fa fa-exclamation-circle"></i> Email Id Required</span>
+            <span class="error" ng-show="myForm.email.$error.pattern"><i class="fa fa-exclamation-circle"></i> Invalid Email Address</span>
+        </span><br>
+
+        <label>Book Name</label>
+        <input type="text" name="bname" ng-model="bname" pattern="[a-zA-Z]{1,}" required=""><br>
+        <span ng-show="myForm.$submitted || myForm.bname.$dirty">
+            <span class="error" ng-show="myForm.bname.$error.required"><i class="fa fa-exclamation-circle"></i> Book Name Required</span>
+        </span><br>
+
+        <label>Author Name</label>
+        <input type="text" name="aname" ng-model="aname" pattern="[a-zA-Z]{1,}+$" required=""><br>
+        <span ng-show="myForm.$submitted || myForm.aname.$dirty">
+            <span class="error" ng-show="myForm.aname.$error.required"><i class="fa fa-exclamation-circle"></i> Author Name Required</span>
+            <span class="error" ng-show="myForm.aname.$error.pattern"><i class="fa fa-exclamation-circle"></i> Author Name cannot be Number</span>
+        </span><br>
+
+        <label>Publications</label>
+        <input type="text" name="pname" ng-model="pname" pattern="[a-zA-Z]{1,}" required=""><br>
+        <span ng-show="myForm.$submitted || myForm.pname.$dirty">
+            <span class="error" ng-show="myForm.pname.$error.required"><i class="fa fa-exclamation-circle"></i> Publications Required</span>
+        </span><br>
+
+        <label>Book Cover Type</label>
+        <select name="course" ng-model="course" required="">
+            <option>Hard Cover</option>
+            <option>Soft Cover</option>
+        </select>
+        <span ng-show="myForm.$submitted || myForm.course.$dirty"><br>
+            <span class="error" ng-show="myForm.course.$error.required"><i class="fa fa-exclamation-circle"></i> Book Cover Type Required</span>
+        </span><br><br>
+
+        <label>Quantity</label>
+        <input type="number" name="quantity" ng-model="quantity" pattern="{1,}" required=""><br>
+        <span ng-show="myForm.$submitted || myForm.quantity.$dirty">
+            <span class="error" ng-show="myForm.quantity.$error.required"><i class="fa fa-exclamation-circle"></i> Quantity Required</span>
+            <span class="error" ng-show="myForm.quantity.$error.pattern"><i class="fa fa-exclamation-circle"></i> Quantity can only be a number</span>
+        </span><br><br>
+
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <button type="submit">Donate</button>&nbsp&nbsp&nbsp
+        <button type="reset">Reset</button>
+    </form>
+</div>
+</body> 
+</html>                 
